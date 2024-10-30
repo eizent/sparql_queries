@@ -18,13 +18,26 @@ A prefix is a shortcut which references a URI. This prefix can then be reference
 
 The property identifier prefix would be established like this:
 ```sql
-PREFIX p: <http://wikidata.org/prop/>
+PREFIX wdt: <http://wikidata.org/prop/direct/>
 ```
 And the one for entity looks like this:
 ```sql
 PREFIX wd: <http://www.wikidata.org/entity/
 ```
-When you make more complicated queries or will use a particular URI, this will be especially helpful to create a shortcut to a particular part of the database you're querying. It is also good to know the built-in prefixes as they're used in most basic searches! Most commonly, you will be using wdt (for items) and wd (for properties). 
+When you make more complicated queries or will use a particular URI, this will be especially helpful to create a shortcut to a particular part of the database you're querying. It is also good to know the built-in prefixes as they're used in most basic searches! Most commonly in simple queries, you will be using wdt: (for items) and wd: (for properties). Without using prefixes, the entire URI would have to be written out each time.
+
+```sql
+# Referencing Bryn Mawr College Special Collections without prefixes:
+<http://wikidata.org/entity/Q101240133>
+
+# With prefixes
+wd:Q10124133
+```
+### SPARQL Hack!
+After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize or search for long strings of numbers! The reference ID for a page on Wikidata can be found in parenthesis after the title of the page. 
+
+
+More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
 
 ## Wikidata Query Builder
