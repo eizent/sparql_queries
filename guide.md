@@ -13,9 +13,22 @@ WHERE {
     subject_uri predicate_uri oject_uri.
 }
 ```
+### So, what is a prefix? 
+A prefix is a shortcut which references a URI. This prefix can then be referenced throughout the query and makes the code simpler, shorter, and more readable. Some prefixes are built into Wikidata, like property and entity. 
+
+The property identifier prefix would be established like this:
+```sql
+PREFIX p: <http://wikidata.org/prop/>
+```
+And the one for entity looks like this:
+```sql
+PREFIX wd: <http://www.wikidata.org/entity/
+```
+When you make more complicated queries or will use a particular URI, this will be especially helpful to create a shortcut to a particular part of the database you're querying. It is also good to know the built-in prefixes as they're used in most basic searches! Most commonly, you will be using wdt (for items) and wd (for properties). 
+
 
 ## Wikidata Query Builder
-Wikidata offers a service to build simple WIki 
+Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. 
 
 # Glossary 
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. If you're new to the Semantic Web, check out this article for a brief overview: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
