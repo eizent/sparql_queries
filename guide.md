@@ -39,6 +39,10 @@ After typing the prefix you want, press control + space on your keyboard to type
 
 More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
+### Triples!
+The key to SPARQL queries is understanding the triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. Some examples of this triple structure would be:
+    *Joan Baez* (subject) *has works in the collection* (predicate) *Bryn Mawr College Special Collections* (object)
+    
 
 ## Wikidata Query Builder
 Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. 
