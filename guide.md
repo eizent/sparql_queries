@@ -41,8 +41,11 @@ More information on prefixes and the list of built-in's can be found at this lin
 
 ### Triples!
 The key to SPARQL queries is understanding the triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. Some examples of this triple structure would be:
-    *Joan Baez* (subject) *has works in the collection* (predicate) *Bryn Mawr College Special Collections* (object)
-    
+
+**Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
+**Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
+
+
 
 ## Wikidata Query Builder
 Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. 
