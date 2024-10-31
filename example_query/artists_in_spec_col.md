@@ -9,7 +9,6 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
 } 
 ```
 
-**Challenge**
-
+**Challenge!!**
 
 How could you change this query to find all the artists in Bryn Mawr Special Collections (that have been added to Wikidata)?
