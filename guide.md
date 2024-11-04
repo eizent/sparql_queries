@@ -34,7 +34,7 @@ When you make more complicated queries or will use a particular URI, this will b
 wd:Q10124133
 ```
 ### SPARQL Hack!
-After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize or search for long strings of numbers! The reference ID for a page on Wikidata can be found in parenthesis after the title of the page. 
+After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize or search for long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it will be in parenthesis after the title of the page. 
 
 
 More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
@@ -48,7 +48,7 @@ The key to SPARQL queries is understanding the triple format, which will be fami
 
 
 ## Wikidata Query Builder
-Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. 
+Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. THye 
 
 # Glossary 
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' If you're new to the Semantic Web, check out this article for a brief overview and explanation: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
