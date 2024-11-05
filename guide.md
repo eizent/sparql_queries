@@ -40,15 +40,18 @@ After typing the prefix you want, press control + space on your keyboard to type
 More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
 ### Triples!
-The key to SPARQL queries is understanding the triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. Some examples of this triple structure would be:
+The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
 
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
+To create a SPARQL query, first think of what you want to search for in this triple format. For example, if you wanted to find all the archives located in the USA, 
 
+### Select 
+The SELECT clause defines the result set to be returned. 
 
 ## Wikidata Query Builder
-Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. THye 
+Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. For the Query Builder, you need 
 
 # Glossary 
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' If you're new to the Semantic Web, check out this article for a brief overview and explanation: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
@@ -61,6 +64,8 @@ Resource: https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-
 Machine readable version of the web. Wikidata stemmed from the concept of the Semantic Web, attemping to create (in a nutshell) a machine readable and searchable version of Wikipedia. 
 
 ### RDF (Resource Description Framework)
+
+### Relational Database
 
 ### URI (Uniform Resource Identifier)
 Provides a means of locating and retrieving information resources on a network (in this case, Wikidata). A URL (Uniform Resource Locator, which we use on the web everyday) is a specific type of URI that provides the specific location or address of a resource on the Internet (web page). However, a URI is used to define an item's identity, rather then just locate it. 
