@@ -1,4 +1,4 @@
-## This query will return all the visual artists who have works in Bryn Mawr's Special Collections and in the Stedelijk Museum in Amsterdam.
+This query will return all the visual artists who have works in Bryn Mawr's Special Collections and in the Stedelijk Museum in Amsterdam.
 
 ```sql
 SELECT ?item WHERE{
