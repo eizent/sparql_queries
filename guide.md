@@ -34,8 +34,7 @@ When you make more complicated queries or will use a particular URI, this will b
 wd:Q10124133
 ```
 ### SPARQL Hack!
-After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize or search for long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it will be in parenthesis after the title of the page. 
-
+After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize the object ID or type long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it would be in parenthesis after the title of the page. 
 
 More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
@@ -45,7 +44,7 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
-To create a SPARQL query, first think of what you want to search for in this triple format. For example, if you wanted to find all the archives located in the USA, 
+To create a SPARQL query, first think of what you want to search for in this triple format. How would you write a simple sentence that 
 
 ### Select 
 The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). 
