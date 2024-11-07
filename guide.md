@@ -47,7 +47,7 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
-!{image of the basic triple structure](sparql_github_imgs/Basic_RDF_graph.svg.png)
+![image of the basic triple structure](sparql_github_imgs/Basic_RDF_graph.svg.png)
 
 Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
