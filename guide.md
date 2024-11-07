@@ -44,15 +44,33 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
-To create a SPARQL query, first think of what you want to search for in this triple format. How would you write a simple sentence that 
+Before you create you SPARQL query, think of what you want to search forusing a sentence in this triple structure! 
 
 ### Select 
 The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). 
 
+### Where
+The WHERE clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
+
+In the WHERE clause, you can have multiple criteria wihtin a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
+
+```sql
+SELECT ?item WHERE{
+#First part filtering people with works in BMC Spec Coll
+?item wdt:P6379 wd:Q101240113;
+#second part specifying country of origin as Belgium
+        wdt:P27 wd:Q31.
+}
+```
+Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. And remember, you don't have to memorize all of the reference IDs, just use control+space and type the word/phrase you're looking for! If you paste this into the Query Service, hovering over the entities and object IDs will also bring a pop-up which tells you what they reference. 
+
+
+While SPARQL queries at first may look like a jumble of numbers and letters, it can actually be very user friendly!
+
 ## Wikidata Query Builder
 Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. For the Query Builder, you will be asked to put in a property and a value, and the service will return the item and the itemLabel, creating a simple query! You can add as many conditions (using the blue button) to filter your search further, using the same property and value structure. 
 
-Additionally, if you wanted to edit the query further, you can show the query in the Query Service. Viewing and editing the created query is also a great way to become familiar with the structure of SPARQL!
+Additionally, if you wanted to edit the query further, you can show the query in the Query Service. Viewing and editing the query you designed in the query builder is also a great way to become familiar with the structure of SPARQL!
 
 # Glossary 
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' If you're new to the Semantic Web, check out this article for a brief overview and explanation: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
