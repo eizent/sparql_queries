@@ -34,7 +34,9 @@ When you make more complicated queries or will use a particular URI, this will b
 wd:Q10124133
 ```
 ### SPARQL Hack!
-After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize the object ID or type long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it would be in parenthesis after the title of the page. 
+After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize the object ID or type long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it would be in parenthesis after the title of the page (as seen below). 
+
+![image showing Bryn Mawr College Special Collections reference ID on Wikidata](sparql_github_imgs/speccol.png)
 
 More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
@@ -42,9 +44,12 @@ More information on prefixes and the list of built-in's can be found at this lin
 The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
 
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
+
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
-Before you create you SPARQL query, think of what you want to search forusing a sentence in this triple structure! 
+!{image of the basic triple structure](sparql_github_imgs/Basic_RDF_graph.svg.png)
+
+Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
 ### Select 
 The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). 
@@ -71,6 +76,8 @@ While SPARQL queries at first may look like a jumble of numbers and letters, it 
 
 ## Wikidata Query Builder
 Wikidata offers a service to build simple SPARQL queries without knowledge of SPARQL. For the Query Builder, you will be asked to put in a property and a value, and the service will return the item and the itemLabel, creating a simple query! You can add as many conditions (using the blue button) to filter your search further, using the same property and value structure. 
+
+![image of the Wikidata Query Builder](sparql_github_imgs/query_builder.png)
 
 Additionally, if you wanted to edit the query further, you can show the query in the Query Service. Viewing and editing the query you designed in the query builder is also a great way to become familiar with the structure of SPARQL!
 
