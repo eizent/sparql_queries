@@ -85,15 +85,16 @@ Additionally, if you wanted to edit the query further, you can show the query in
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' If you're new to the Semantic Web, check out this article for a brief overview and explanation: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
 
 ### Linked Data
+Linked data is structured data, in the form of semantic triples: subject, predicate, object.  Ontotext defines it succinctly as, an overarching “set of design principles for sharing machine-readable interlinked data on the Web.” For this project, the information contained in the triple is: an artist (subject), has works in the collection of (predicate), Bryn Mawr College Special Collections (object).  
 
 Resource: https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/
 
 ### Semantic Web
-Machine readable version of the web. Wikidata stemmed from the concept of the Semantic Web, attemping to create (in a nutshell) a machine readable and searchable version of Wikipedia. 
+The semantic web is an extension of the World Wide Web, but in an attempt to create a machine readable version of the web. Wikidata stemmed from the concept of the Semantic Web, attemping to create (in a nutshell) a machine readable and searchable version of Wikipedia. 
 
 ### RDF (Resource Description Framework)
-
-### Relational Database
+RDF is a way for representing interconnected (or linked) data on the web. It is essentially the data modeling language for the Semantic web as all the information stored on the Semantic web is represented in this framework. A semantic triple or an RDF triple is the data entity in an RDF data model. Wikidata is modeled on the use of the RDF framework. 
+Resource: https://www.techtarget.com/searchapparchitecture/definition/Resource-Description-Framework-RDF
 
 ### URI (Uniform Resource Identifier)
 Provides a means of locating and retrieving information resources on a network (in this case, Wikidata). A URL (Uniform Resource Locator, which we use on the web everyday) is a specific type of URI that provides the specific location or address of a resource on the Internet (web page). However, a URI is used to define an item's identity, rather then just locate it. 
