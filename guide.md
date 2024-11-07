@@ -64,6 +64,8 @@ SELECT ?item WHERE{
 ```
 Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. And remember, you don't have to memorize all of the reference IDs, just use control+space and type the word/phrase you're looking for! If you paste this into the Query Service, hovering over the entities and object IDs will also bring a pop-up which tells you what they reference. 
 
+![image of the query in the query service](sparql_queries/sparql_github_imgs/belgium.png)
+
 
 While SPARQL queries at first may look like a jumble of numbers and letters, it can actually be very user friendly!
 
