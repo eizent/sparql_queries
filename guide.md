@@ -1,44 +1,21 @@
 # SPARQL and SPARQL Queries!
 
 ## What is SPARQL? 
-SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' This takes the form of subject-predicate-object, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
+SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' **link out to SQL**
+
+This takes the form of subject-predicate-object, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
 
 ## Basic Syntax of a Query
 
 ```sql
-PREFIX prefix_short_name: <prefix_full_uri>
 
+#specify what you want to search for
 SELECT ?item
 WHERE {
+#triple!
     subject_uri predicate_uri oject_uri.
 }
 ```
-### So, what is a prefix? 
-A prefix is a shortcut which references a URI. This prefix can then be referenced throughout the query and makes the code simpler, shorter, and more readable. Some prefixes are built into Wikidata, like property and entity. 
-
-The property identifier prefix would be established like this:
-```sql
-PREFIX wdt: <http://wikidata.org/prop/direct/>
-```
-And the one for entity looks like this:
-```sql
-PREFIX wd: <http://www.wikidata.org/entity/
-```
-When you make more complicated queries or will use a particular URI, this will be especially helpful to create a shortcut to a particular part of the database you're querying. It is also good to know the built-in prefixes as they're used in most basic searches! Most commonly in simple queries, you will be using wdt: (for items) and wd: (for properties). Without using prefixes, the entire URI would have to be written out each time.
-
-```sql
-# Referencing Bryn Mawr College Special Collections without prefixes:
-<http://wikidata.org/entity/Q101240133>
-
-# With prefixes
-wd:Q10124133
-```
-### SPARQL Hack!
-After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize the object ID or type long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it would be in parenthesis after the title of the page (as seen below). 
-
-![image showing Bryn Mawr College Special Collections reference ID on Wikidata](sparql_github_imgs/speccol.png)
-
-More information on prefixes and the list of built-in's can be found at this link: https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.
 
 ### Triples!
 The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
@@ -47,12 +24,14 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
+**Bryn Mawr College Special Collections** (subject) *is an instance of* (predicate) **an archive**
+
 ![image of the basic triple structure](sparql_github_imgs/SubjectPredicateObject.png)
 
 Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
 ### Select 
-The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see SELECT DISTINCT, which will return only unique values in the table or SELECT * which selects everything from a given query. 
+The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see SELECT DISTINCT, which will return only unique values in the table or ```sql SELECT * ``` which selects everything from a given query. 
 
 ### Where
 The WHERE clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
@@ -74,7 +53,33 @@ And remember, you don't have to memorize all of the reference IDs, just use cont
 
 ![image of the query in the query service](sparql_github_imgs/belgium.png)
 
+```
+### So, what is a prefix? 
+A prefix is a shortcut which references a URI. This prefix can then be referenced throughout the query and makes the code simpler, shorter, and more readable. Some prefixes are built into Wikidata, like property and entity. 
 
+The property identifier prefix would be established like this:
+```sql
+PREFIX wdt: <http://wikidata.org/prop/direct/>
+```
+And the one for entity looks like this:
+```sql
+PREFIX wd: <http://www.wikidata.org/entity/
+```
+When you make more complicated queries or will use a particular URI, this will be especially helpful to create a shortcut to a particular part of the database you're querying. It is also good to know the built-in prefixes as they're used in most basic searches! Most commonly in simple queries, you will be using wdt: (for items) and wd: (for properties). Without using prefixes, the entire URI would have to be written out each time.
+
+```sql
+# Referencing Bryn Mawr College Special Collections without prefixes:
+<http://wikidata.org/entity/Q101240133>
+
+# With prefixes
+wd:Q10124133
+```
+### SPARQL (in WikiData) Hack!
+After typing the prefix you want, press control + space on your keyboard to type out your entity/property name. This way, you don't need to memorize the object ID or type long strings of numbers! However, if you did want to find the reference ID for a page on Wikidata, it would be in parenthesis after the title of the page (as seen below). 
+
+![image showing Bryn Mawr College Special Collections reference ID on Wikidata](sparql_github_imgs/speccol.png)
+
+[More information on prefixes and the list of built-in's can be found here. ]([url](https://en.wikibooks.org/wiki/SPARQL/Prefixes#:~:text=For%20simple%20WDQS%20triples%2C%20items%20should%20be%20prefixed,fixed%20values%20%E2%80%93%20variables%20don%E2%80%99t%20get%20a%20prefix.))
 
 While SPARQL queries at first may look like a jumble of numbers and letters, it can actually be very user friendly!
 
@@ -86,12 +91,14 @@ Wikidata offers a service to build simple SPARQL queries without knowledge of SP
 Additionally, if you wanted to edit the query further, you can show the query in the Query Service. Viewing and editing the query you designed in the query builder is also a great way to become familiar with the structure of SPARQL!
 
 # Glossary 
-There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' If you're new to the Semantic Web, check out this article for a brief overview and explanation: https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.
+There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' [If you're new to the Semantic Web, check out the article linked here for a brief overview and explanation.  ]([url](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.))
 
 ### Linked Data
 Linked data is structured data, in the form of semantic triples: subject, predicate, object.  Ontotext defines it succinctly as, an overarching “set of design principles for sharing machine-readable interlinked data on the Web.” For this project, the information contained in the triple is: an artist (subject), has works in the collection of (predicate), Bryn Mawr College Special Collections (object).  
 
-Resource: https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/
+Resource: https://programminghistorian.org/en/lessons/intro-to-linked-data
+
+### SQL 
 
 ### Semantic Web
 The semantic web is an extension of the World Wide Web, but in an attempt to create a machine readable version of the web. Wikidata stemmed from the concept of the Semantic Web, attemping to create (in a nutshell) a machine readable and searchable version of Wikipedia. 
