@@ -52,7 +52,7 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
 ### Select 
-The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). 
+The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see SELECT DISTINCT, which will return only unique values in the table or SELECT * which selects everything from a given query. 
 
 ### Where
 The WHERE clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
@@ -67,9 +67,13 @@ SELECT ?item WHERE{
         wdt:P27 wd:Q31.
 }
 ```
-Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. And remember, you don't have to memorize all of the reference IDs, just use control+space and type the word/phrase you're looking for! If you paste this into the Query Service, hovering over the entities and object IDs will also bring a pop-up which tells you what they reference. 
+Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. However, if you were selecting multiple things (like for example a person and a place) in the select clause, you would need to write those full triples. When you end a query, make sure to use a period and to close the curly braces. 
+
+
+And remember, you don't have to memorize all of the reference IDs, just use control+space and type the word/phrase you're looking for! If you paste this into the Query Service, hovering over the entities and object IDs will also bring a pop-up which tells you what they reference. 
 
 ![image of the query in the query service](sparql_github_imgs/belgium.png)
+
 
 
 While SPARQL queries at first may look like a jumble of numbers and letters, it can actually be very user friendly!
