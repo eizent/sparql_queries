@@ -109,3 +109,6 @@ Resource: https://www.techtarget.com/searchapparchitecture/definition/Resource-D
 
 ### URI (Uniform Resource Identifier)
 Provides a means of locating and retrieving information resources on a network (in this case, Wikidata). A URL (Uniform Resource Locator, which we use on the web everyday) is a specific type of URI that provides the specific location or address of a resource on the Internet (web page). However, a URI is used to define an item's identity, rather then just locate it. 
+
+
+https://www.w3.org/TR/rdf-sparql-query/
