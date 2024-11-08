@@ -53,7 +53,7 @@ And remember, you don't have to memorize all of the reference IDs, just use cont
 
 ![image of the query in the query service](sparql_github_imgs/belgium.png)
 
-```
+
 ### So, what is a prefix? 
 A prefix is a shortcut which references a URI. This prefix can then be referenced throughout the query and makes the code simpler, shorter, and more readable. Some prefixes are built into Wikidata, like property and entity. 
 
