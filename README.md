@@ -3,4 +3,4 @@ Markdown file describing SPARQL queries and how to use them in Wikidata for Bryn
 
 To learn about SPARQL queries, navitage to guide.md!
 
-Want to run some practice queries? Find them in the example_queries folder. 
+Want to run some practice queries? Find them in the example_query folder. 
