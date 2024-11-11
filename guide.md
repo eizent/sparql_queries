@@ -1,9 +1,9 @@
 # SPARQL and SPARQL Queries!
 
 ## What is SPARQL? 
-SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' **link out to SQL**
+SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!]([url](https://www.w3schools.com/whatis/whatis_sql.asp))
 
-This takes the form of subject-predicate-object, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
+Triples are formed by subject-predicate-object statements, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
 
 ## Basic Syntax of a Query
 
@@ -18,7 +18,7 @@ WHERE {
 ```
 
 ### Triples!
-The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
+The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed of statements in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
 
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
 
@@ -28,13 +28,15 @@ The key to SPARQL queries is understanding the semantic triple format, which wil
 
 ![image of the basic triple structure](sparql_github_imgs/SubjectPredicateObject.png)
 
+Notice here that even the verbs are part of the structure and have their own URI. These specific verbs and verb phrases (like **is an instance of** or **was born**) actually have their own URIs act as a link between the subject and the object. 
+
 Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
 ### Select 
-The SELECT clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see SELECT DISTINCT, which will return only unique values in the table or ```sql SELECT * ``` which selects everything from a given query. 
+The ```sql SELECT ``` clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see ```sql SELECT DISTINCT ```, which will return only unique values in the table or ```sql SELECT * ``` which selects everything from a given query. 
 
 ### Where
-The WHERE clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
+The ```sql WHERE``` clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
 
 In the WHERE clause, you can have multiple criteria wihtin a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
 
@@ -99,6 +101,7 @@ Linked data is structured data, in the form of semantic triples: subject, predic
 Resource: https://programminghistorian.org/en/lessons/intro-to-linked-data
 
 ### SQL 
+SQL stands for Structured Query Language and is used to manage data in relational databases. 
 
 ### Semantic Web
 The semantic web is an extension of the World Wide Web, but in an attempt to create a machine readable version of the web. Wikidata stemmed from the concept of the Semantic Web, attemping to create (in a nutshell) a machine readable and searchable version of Wikipedia. 
