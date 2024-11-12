@@ -33,12 +33,12 @@ Notice here that even the verbs are part of the structure and have their own URI
 Before you create you SPARQL query, it can be helpful to first think of the phrase using this triple structure! 
 
 ### Select 
-The ```sql SELECT ``` clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see ```sql SELECT DISTINCT ```, which will return only unique values in the table or ```sql SELECT * ``` which selects everything from a given query. 
+The ``` SELECT ``` clause defines the result set to be returned. Typically, you can select an ?item, but multiple things can be selected in one query, like an ?itemLabel or a picture (?pic). Additionally, you may see ``` SELECT DISTINCT ```, which will return only unique values in the table or ``` SELECT * ``` which selects everything from a given query. 
 
 ### Where
 The ```sql WHERE``` clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
 
-In the ```sql WHERE ``` clause, you can have multiple criteria within a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple that has the same subject. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
+In the ``` WHERE ``` clause, you can have multiple criteria within a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple that has the same subject. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
 
 ```sql
 SELECT ?item
