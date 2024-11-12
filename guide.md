@@ -1,7 +1,7 @@
 # SPARQL and SPARQL Queries!
 
 ## What is SPARQL? 
-SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!]([url](https://www.w3schools.com/whatis/whatis_sql.asp)) Additionally, here is Wikidata's SPARQL Tutorial!
+SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!]([url](https://www.w3schools.com/whatis/whatis_sql.asp)) [Additionally, here is Wikidata's SPARQL Tutorial!]([url](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial))
 
 Triples are formed by subject-predicate-object statements, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
 
