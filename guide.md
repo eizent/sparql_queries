@@ -1,7 +1,7 @@
 # SPARQL and SPARQL Queries!
 
 ## What is SPARQL? 
-SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!]([url](https://www.w3schools.com/whatis/whatis_sql.asp))
+SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!]([url](https://www.w3schools.com/whatis/whatis_sql.asp)) Additionally, here is Wikidata's SPARQL Tutorial!
 
 Triples are formed by subject-predicate-object statements, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
 
@@ -17,7 +17,7 @@ WHERE {
 }
 ```
 
-### Triples!
+### Triples
 The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed of statements in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
 
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
@@ -38,17 +38,20 @@ The ```sql SELECT ``` clause defines the result set to be returned. Typically, y
 ### Where
 The ```sql WHERE``` clause is the place where you input the majority of the query. This specifies what you want the result to be, as SPARQL will filter what you wanted to SELECT using the criteria in the WHERE. 
 
-In the WHERE clause, you can have multiple criteria wihtin a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
+In the ```sql WHERE ``` clause, you can have multiple criteria within a query. To separate different triples, make sure to use ';' (a semicolon) in between each triple that has the same subject. For example, if you wanted to find artists in Bryn Mawr's Special Collections who were also citizens of Belgium this is what the query would look like:
 
 ```sql
-SELECT ?item WHERE{
+SELECT ?item
+WHERE{
 #First part filtering people with works in BMC Spec Coll
 ?item wdt:P6379 wd:Q101240113;
 #second part specifying country of origin as Belgium
         wdt:P27 wd:Q31.
 }
 ```
-Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. However, if you were selecting multiple things (like for example a person and a place) in the select clause, you would need to write those full triples. When you end a query, make sure to use a period and to close the curly braces. 
+Notice in this query the prefixes wdt and wd for object and entity, as well as only specifying the first part of the triple (?item) one time for both. However, if you were selecting multiple things (like for example a person and a place) in the select clause, you would need to write those full triples and separate them using a period. 
+
+When you end a query, make sure to use a period and to close the curly braces. 
 
 
 And remember, you don't have to memorize all of the reference IDs, just use control+space and type the word/phrase you're looking for! If you paste this into the Query Service, hovering over the entities and object IDs will also bring a pop-up which tells you what they reference. 
