@@ -3,5 +3,5 @@ Markdown file describing SPARQL queries and how to use them in Wikidata for Bryn
 
 **Contents**
 
-- [SPARQL Guide and Information][guide.md]
-- [Examples of Queries][example_query]
+- (SPARQL Guide and Information)[guide.md]
+- (Examples of Queries)[example_query]
