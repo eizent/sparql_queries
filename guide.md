@@ -1,9 +1,19 @@
 # SPARQL and SPARQL Queries!
 
-## What is SPARQL? 
-SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!](https://www.w3schools.com/whatis/whatis_sql.asp) [Additionally, here is Wikidata's SPARQL Tutorial!](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
+### Table of Contents:
+- [Intro](#what-is-sparql)
+- [Basic Syntax of a Query](#basic-syntax-of-a-query)
+- [Triples](#triples)
+- [SELECT Clause](#select)
+- [WHERE Clause](#where)
+- [Prefixes](#so-what-is-a-prefix)
+- [Wikidata Query Builder](#wikidata-query-builder)
+- [Glossary](#glossary) 
 
-Triples are formed by subject-predicate-object statements, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. 
+
+## What is SPARQL? 
+SPARQL (pronounced 'sparkle' :sparkles:) is a query language for the Semantic Web, including Wikidata. SPARQL is a recursive acronym which stands for SPARQL Protocol and RDF Query Language. Using SPARQL, users can easily search and filter data within an RDF (Resource Description Framework) format to their specifications. It uses much of the same logic as SQL, and is composed using 'triple statements.' To learn more about SQL, [click here!](https://www.w3schools.com/whatis/whatis_sql.asp) Additionally, here is [Wikidata's SPARQL Tutorial!](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
+ 
 
 ## Basic Syntax of a Query
 
@@ -18,13 +28,13 @@ WHERE {
 ```
 
 ### Triples
-The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed of statements in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. Some examples of this triple structure would be:
+The key to SPARQL queries is understanding the semantic triple format, which will be familiar if you have prior knowledge of SQL. SPARQL views Wikidata (and all RDF databases) through being composed of statements in this triple structure. A triple is a sequence of three entities (things) that creates a statement about semantic data. More specifically, triples are formed by subject-predicate-object statements, where in SPARQL the URIs (Uniform Resource Identifiers) would be used, and a triple could also be described as entity identifier-attribute name-attribute value. Some examples of this triple structure would be:
 
 **Joan Baez** (subject) *has works in the collection* (predicate) **Bryn Mawr College Special Collections** (object)
 
 **Vincent Van Gogh** (subject) *painted* (predicate) **Sunflowers** (object)
 
-**Bryn Mawr College Special Collections** (subject) *is an instance of* (predicate) **an archive**
+**Bryn Mawr College Special Collections** (subject) *is an instance of* (predicate) **an archive** (object)
 
 ![image of the basic triple structure](sparql_github_imgs/SubjectPredicateObject.png)
 
