@@ -8,6 +8,7 @@
 - [WHERE Clause](#where)
 - [Prefixes](#so-what-is-a-prefix)
 - [Wikidata Query Builder](#wikidata-query-builder)
+- [Examples of Queries](#query-examples)
 - [Glossary](#glossary) 
 
 
@@ -104,6 +105,55 @@ Wikidata offers a service to build simple SPARQL queries without knowledge of SP
 ![image of the Wikidata Query Builder](sparql_github_imgs/query_builder.png)
 
 Additionally, if you wanted to edit the query further, you can show the query in the Query Service. Viewing and editing the query you designed in the query builder is also a great way to become familiar with the structure of SPARQL!
+
+## Query Examples
+
+#### Find all the women artists in Bryn Mawr's Special Collections:
+```sql
+#selecting only unique
+SELECT DISTINCT * 
+WHERE{
+#triple one filtering for those with works in BMC Special Collections 
+  ?item wdt:P6379 wd:Q101240133;
+#triple two filtering for women (*is an instance of* woman)
+        wdt:P21 wd:Q6581072.}
+```
+
+#### Return all the artists that have works in the collection at the Art Institute of Chicago:
+```sql
+SELECT ?item ?itemLabel   
+WHERE {  
+    ?item wdt:P106 wd:Q483501;  
+          wdt:P6379 wd:Q239303  
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }  
+}
+```
+
+#### Return the ceramicists in Bryn Mawr College's Special Collections as an Image Grid:
+```sql
+#defaultView:ImageGrid
+#must select both the item and the picture, and within the query both must be defined
+SELECT ?item ?pic WHERE{
+  ?item
+        wdt:P106 wd:Q7541856;
+        wdt:P6379 wd:Q101240133;
+        wdt:P18 ?pic.
+}
+```
+
+#### Find all the visual artists who have works in Bryn Mawr's Special Collections and in the Stedelijk Museum in Amsterdam:
+```sql
+SELECT ?item ?itemLabel WHERE{
+#triple one selecting visual artist (item-occupation-visual artist)
+  ?item wdt:P106 wd:Q3391743;
+#triple two filtering BMC Special Collections (item-has works in collection-BMC Spec Col)
+        wdt:P6379 wd:Q101240133;
+#triple three filtering Stedelijk (item-has works in collection-Stedelijk)
+        wdt:P6379 wd:Q924335.
+#connecting to the label service to also return names
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+}
+```
 
 # Glossary 
 There are a lot of terms relating to SPARQL and Wikidata, many of which are related but not interchangeable. SPARQL and Wikidata are built under the world and concepts of the 'Semantic Web.' [If you're new to the Semantic Web, check out the article linked here for a brief overview and explanation.  ]([url](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/#:~:text=The%20Semantic%20Web%20is%20a%20vision%20about%20an,otherwise%20existing%20content%20and%20data%20on%20the%20Web.))
